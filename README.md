@@ -17,8 +17,8 @@ A simple in-memory datastore for storing vector embeddings
 
 # TODO
 
-- [] Add proper documentation
-- [] Unit testing
-- [] Approximate KNN Search
-- [] Follow go based naming scheme for structs
-- [] Follow go standards for organization
+- [ ] Add proper documentation
+- [ ] Unit testing
+- [ ] Approximate KNN Search
+- [ ] Follow go based naming scheme for structs
+- [ ] Follow go standards for organization
