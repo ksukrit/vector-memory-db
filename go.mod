@@ -1,4 +1,4 @@
-module github.com/ksukrit/vec-mem-db
+module github.com/ksukrit/vector-memory-db
 
 go 1.20
 
