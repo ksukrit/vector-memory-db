@@ -34,6 +34,9 @@ func main() {
 			}
 
 		}
+	} else {
+		RunBenchmark()
+		return
 	}
 
 	if embedding_size == 0 {

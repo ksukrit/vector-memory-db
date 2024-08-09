@@ -45,6 +45,11 @@ func (db *InMemVectorDB) Insert(value Vector) string {
 
 	uuidString := uuid.String()
 
+	if len(value) != db.GetEmbeddingSize() {
+		// we need to pad the vectors here
+		value = PadVector(value, db.GetEmbeddingSize(), 0.0)
+	}
+
 	db.mu.Lock()
 	defer db.mu.Unlock()
 	db.data[uuidString] = value
@@ -137,7 +142,7 @@ func (db *InMemVectorDB) IncreaseEmbeddingSize(newEmbeddingSize int) {
 	db.embedding_size = newEmbeddingSize
 	db.totalCommandsProcessed++
 	for key, value := range db.data {
-		db.data[key] = PadVector(value, newEmbeddingSize)
+		db.data[key] = PadVector(value, newEmbeddingSize, 0.0)
 	}
 }
 

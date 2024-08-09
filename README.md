@@ -12,7 +12,7 @@ A simple in-memory datastore for storing vector embeddings
 - [x] Dot Product
 - [x] Change the embedding size (Default is currently 128)
 - [x] Load vectors from a previously exited dump
-- [ ] Different size vectors
+- [x] Different size vectors (Pads the vectors to embedding size)
 - [ ] ANN Search
 
 # TODO
@@ -22,3 +22,5 @@ A simple in-memory datastore for storing vector embeddings
 - [ ] Approximate KNN Search
 - [ ] Follow go based naming scheme for structs
 - [ ] Follow go standards for organization
+- [ ] Similarity between two vectors
+- [ ] Custom map implementation 
